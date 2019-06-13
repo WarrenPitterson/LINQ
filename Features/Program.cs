@@ -21,15 +21,29 @@ namespace Features
                 new Employee {Id = 3, Name = "Alan"}
             };
 
-
-            Console.WriteLine(developers.Count());
-
-            IEnumerator<Employee> enumerator = developers.GetEnumerator();
-            while (enumerator.MoveNext())
+            foreach (var employee in developers.Where(
+                delegate (Employee employee)
             {
-                Console.WriteLine(enumerator.Current.Name);
+                return employee.Name.StartsWith("W");
+            }))
+            {
+                Console.WriteLine(employee.Name);
             }
 
+
+            //Console.WriteLine(developers.Count());
+
+            //IEnumerator<Employee> enumerator = developers.GetEnumerator();
+            //while (enumerator.MoveNext())
+            //{
+            //    Console.WriteLine(enumerator.Current.Name);
+            //}
+
+        }
+
+        private static bool NameStartsWithW(Employee employee)
+        {
+            return employee.Name.StartsWith("W");
         }
     }
 }
