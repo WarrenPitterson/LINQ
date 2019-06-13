@@ -10,12 +10,12 @@ namespace Features
     {
         static void Main(string[] args)
         {
-            Func<int, int> square = x => x*x;
-            Func<int, int, int> add = (x, y) =>
+            int square(int x) => x * x;
+            int add(int x, int y)
             {
                 int temp = x + y;
                 return temp;
-            };
+            }
             IEnumerable<Employee> developers = new Employee[]
             {
                 new Employee {Id = 1, Name = "Warren"},
