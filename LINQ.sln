@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ", "LINQ\LINQ.csproj", "{51478791-5FC6-4662-AE95-7BB3B1325862}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Introduction", "LINQ\Introduction.csproj", "{51478791-5FC6-4662-AE95-7BB3B1325862}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Features", "Features\Features.csproj", "{D6DDD5E1-56A8-410F-9802-2FC9358F7D82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queries", "Queries\Queries.csproj", "{D9401A86-B834-44BC-A247-D6B8897FDC1F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{D6DDD5E1-56A8-410F-9802-2FC9358F7D82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6DDD5E1-56A8-410F-9802-2FC9358F7D82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6DDD5E1-56A8-410F-9802-2FC9358F7D82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9401A86-B834-44BC-A247-D6B8897FDC1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9401A86-B834-44BC-A247-D6B8897FDC1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9401A86-B834-44BC-A247-D6B8897FDC1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9401A86-B834-44BC-A247-D6B8897FDC1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
