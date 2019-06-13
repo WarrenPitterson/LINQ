@@ -10,34 +10,34 @@ namespace Features
     {
         static void Main(string[] args)
         {
+            Func<int, int> square = x => x*x;
+            Func<int, int, int> add = (x, y) =>
+            {
+                int temp = x + y;
+                return temp;
+            };
             IEnumerable<Employee> developers = new Employee[]
             {
                 new Employee {Id = 1, Name = "Warren"},
                 new Employee {Id = 2, Name = "Liam"},
+                new Employee {Id = 3, Name = "Steven"}
             };
 
-            IEnumerable<Employee> sales = new List<Employee>()
+            Console.WriteLine(square(add(3,5)));
+
+            var sales = new List<Employee>()
             {
-                new Employee {Id = 3, Name = "Alan"}
+                new Employee {Id = 4, Name = "Alan"}
             };
 
-            foreach (var employee in developers.Where(
-                delegate (Employee employee)
-            {
-                return employee.Name.StartsWith("W");
-            }))
+
+            var query = developers.Where(e => e.Name.Length == 6)
+                                    .OrderBy(e => e.Name);
+
+            foreach (var employee in query)
             {
                 Console.WriteLine(employee.Name);
             }
-
-
-            //Console.WriteLine(developers.Count());
-
-            //IEnumerator<Employee> enumerator = developers.GetEnumerator();
-            //while (enumerator.MoveNext())
-            //{
-            //    Console.WriteLine(enumerator.Current.Name);
-            //}
 
         }
 
